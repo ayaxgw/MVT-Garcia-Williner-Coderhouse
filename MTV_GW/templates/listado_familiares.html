@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Familiares</title>
+</head>
+<body>
+    {% if Informacion == "Datos" %}
+        <h1 style="color: green;">{{Informacion}} de Familiares</h1>
+    {% elif Informacion == "Datos" %}
+        <h1 style="color: blue;">{{Datos}} de Familiares</h1>
+    {% else %}
+        <h1>Datos {{Familiares}}</h1>
+    {% endif %}
+   
+    <p>Listado de Familiares</p>
+    <ul>
+        {% for familiar in listado_familiares %}       
+            <li>{{familiar}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
