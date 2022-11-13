@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from MTV_GW.views import *
+from App_MTV.views import *
 
 urlpatterns = [
+    path('inicio/', inicio),
     path('admin/', admin.site.urls),
     path('fecha/', fecha_actual),
-    path('', inicio),
-    path('Familiares/', vista_listado_familiares),
-    path('Familiares/', vista_listado_familiares2)
+    path('familiares/', vista_listado_familiares),
+    path('familiares2/', vista_listado_familiares2),
+    path('familia/', lista_familiares)
 ]

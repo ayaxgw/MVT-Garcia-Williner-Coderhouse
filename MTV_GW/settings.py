@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MTV_GW.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'MTV_GW\MTV_GW\templates'],
+        'DIRS': [r'MTV_GW\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

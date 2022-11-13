@@ -9,7 +9,7 @@ def fecha_actual(request):
 
 def inicio(request):
     # Leemos el contenido del archivo HTML
-    archivo = open(r'C:\Users\Ayax\Documents\Coderhouse\Python\MVT+Garcia Williner Ayax\MTV_GW\MTV_GW\templates\inicio.html')
+    archivo = open(r'MTV_GW\templates\inicio.html')
     
     # Creamos una plantilla a partir del contenido del archivo
     plantilla = Template(archivo.read())
@@ -31,7 +31,7 @@ def inicio(request):
 
 def vista_listado_familiares(request):
     # Abrimos el archivo
-    archivo = open(r'C:\Users\Ayax\Documents\Coderhouse\Python\MVT+Garcia Williner Ayax\MTV_GW\MTV_GW\templates\listado_familiares.html')
+    archivo = open(r'MTV_GW\templates\listado_familiares.html')
     
     # Creamos el template
     plantilla = Template(archivo.read())
@@ -56,7 +56,7 @@ def vista_listado_familiares2(request):
     listado_familiares = ["F. Garcia Williner","M. Williner", "J. Garcia","Z. Williner","O.I. Williner"]
     datos = {"Informacion":"Datos", "listado_familiares":listado_familiares}
     
-    plantilla = laoder.get_template("listado_familiares.html")
+    plantilla = loader.get_template(r"listado_familiares.html")
     documento = plantilla.render(datos)
     
     return HttpResponse(documento)
